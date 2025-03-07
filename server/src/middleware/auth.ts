@@ -14,7 +14,7 @@ export const authenticateToken = (req: Request, res: Response, next: NextFunctio
 
   // Check if the token is not present
   if (token == null) {
-    return res.sendStatus(401).json({ error: 'Unauthorized' });
+    res.sendStatus(401).json({ error: 'Unauthorized' });
   } else {
     // Verify the token
     jwt.verify(token, process.env.JWT_SECRET_KEY as string, (err, user) => {
