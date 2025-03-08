@@ -23,7 +23,7 @@ export const authenticateToken = (req: Request, res: Response, next: NextFunctio
       }
       // Set the user in the request object
       req.user = user as JwtPayload;
-      next();
+      return next();
     });
   }
 };
