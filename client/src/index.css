@@ -24,7 +24,7 @@ input:-moz-placeholder {
 
 a {
   font-weight: 500;
-  color: #000000;
+  color: rgb(55, 55, 170);
   text-decoration: inherit;
 }
 a:hover {
