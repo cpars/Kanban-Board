@@ -22,7 +22,7 @@ class AuthService {
         return true;
       }
     } catch (err) {
-      return console.log("Token expired");
+      return true;
     }
   }
 
@@ -43,7 +43,7 @@ class AuthService {
     // Remove the token from localStorage
     localStorage.removeItem("token");
     // Redirect to the login page
-    window.location.assign("/login");
+    window.location.assign("/");
   }
 }
 
